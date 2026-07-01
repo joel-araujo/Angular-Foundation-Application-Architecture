@@ -1,0 +1,39 @@
+<h2>Employees Registration</h2>
+
+<form #employeeForm="ngForm" (ngSubmit)="submitForm(employeeForm)">
+    <div class="mb-3">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name<" class="form-control" ngModel required minlength="3" maxlength="20" #name="ngModel"/>
+        <div class="text-danger">
+            <div *ngIf="name.errors?.['required'] && name.touched">Name is required</div>
+            <div *ngIf="name.errors?.['maxlength'] && name.touched">Name must have at least 3 characters</div>
+            <div *ngIf="name.errors?.['minlength'] && name.touched">Name can not have more then 20 characters</div>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="form-control" ngModel required email pattern="^[a-zA-Z0-9._%+-]+@codingbeam\.com$" #email="ngModel">
+        <div class="text-danger">
+            <div *ngIf="email.errors?.['required'] && email.touched">Email is required</div>
+            <div *ngIf="email.errors?.['email'] && email.touched">Please enter a valid email adress</div>
+            <div *ngIf="email.errors?.['pattern'] && email.touched">Please enter a valid email adress - pattern</div>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label for="position">Position:</label>
+        <input type="text" id="position" name="position" class="form-control" ngModel required #position="ngModel"/>
+        <div class="text-danger" *ngIf="position.invalid && position.touched">Position Required</div>
+    </div>
+
+    <button type="submit" [disabled]="employeeForm.invalid" class="btn btn-success">Submit</button>
+</form>
+
+<hr>
+
+<h4>Registered Employees</h4>
+
+<ul class="list-group">
+    <label class="list-group-item" *ngFor="let emp of employees">{{emp.name}} -- {{emp.position}}</label>
+</ul>

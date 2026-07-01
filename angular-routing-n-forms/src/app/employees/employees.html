@@ -1,0 +1,29 @@
+<a class="btn btn-small btn-outline-secondary" routerLink="/employees-reg">Employee Registration</a> | 
+<a class="btn btn-small btn-outline-secondary" routerLink="/employees-reg-reactive">Employee Registration Reactive</a>
+
+<h2>Employees</h2>
+
+<table border="1" cellPadding="5" cellSpacing="0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>View Details</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.position}}</td>
+            <!-- <td> <a routerLink="['/employees', employee.id]">View Detail</a></td> -->
+            <td>
+                <!-- <a [routerLink]="['/employees', employee.id]">View Detail</a> -->
+                <a [routerLink]="['/employees', employee.id]" [queryParams]="{view: 'profile'}">Employee Profile</a> | 
+                <a [routerLink]="['/employees', employee.id]" [queryParams]="{view: 'salary'}">Employee Salary</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

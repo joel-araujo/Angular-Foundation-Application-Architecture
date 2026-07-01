@@ -1,0 +1,52 @@
+<!-- <h3>{{title}}</h3>
+<p>Company Name: {{companyName}}</p>
+<p>Total Employes: {{totalEmployes}}</p>
+<p>Locaiton: {{location}}</p>
+
+<button [disabled]="!isHiringOpen">
+    Apply for Job
+</button>
+
+<button (click)="toToggleHiring()">
+    Toggle Hiring Status
+</button>
+
+<hr>
+
+<h3>2 way data binding without ng-model</h3>
+
+<input type="text" [value]="location" (input)="updateLocation($event)">
+
+<hr>
+
+<h3>2 way data binding with ng-model</h3>
+<input type="text" [(ngModel)]="location">
+
+<h3>template: bad practice</h3>
+
+<p>{{totalEmployes > 100 ? 'large' : 'samll'}}</p>
+
+<h3>template: good practice</h3>
+
+<p>{{CompanySize}}</p> -->
+
+<h3>{{companyName}}</h3>
+
+<p *ngIf="isHiringOpen">We are hiring, apply!</p>
+
+<h3>Departments</h3>
+<ul>
+    <li *ngFor="let dept of departments">{{dept}}</li>
+</ul>
+
+<h3>Company Status</h3>
+
+<div [ngSwitch]="companyStatus">
+    <p *ngSwitchCase="'active'">The company is ACTIVE</p>
+    <p *ngSwitchCase="'inactive'">The company is INACTIVE</p>
+    <p *ngSwitchCase="'closed'">The company is CLOSED</p>
+    <p *ngSwitchDefault>Status Unknown</p>
+</div>
+
+<p appHighlight>We are hiring, apply!</p>
+

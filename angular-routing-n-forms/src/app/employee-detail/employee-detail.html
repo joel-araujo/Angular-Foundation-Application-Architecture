@@ -1,0 +1,14 @@
+<h1>Employee Detail</h1>
+
+<p>Employee ID: {{employeeId}}</p>
+
+
+<div *ngIf="viewtype === 'profile'">
+    <h3>Profile Information</h3>
+    <p>This section contains the profile details of the employee</p>
+</div>
+
+<div *ngIf="viewtype === 'salary'">
+    <h3>Salary Information</h3>
+    <p>This section contains the salary details of the employee</p>
+</div>
