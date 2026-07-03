@@ -6,7 +6,13 @@ import { ToDoCreateTask } from './components/to-do-create-task/to-do-create-task
 
 export const routes: Routes = [
     {path:'', redirectTo: 'home', pathMatch: 'full'},
-    {path:'home', component: Home},    
+    {path:'home', component: Home,
+        children: [
+            {path:'toDoList', component: ToDoList},    
+            {path:'toDoDetail', component: ToDoDetail},    
+            {path:'toDoCreateTask', component: ToDoCreateTask},
+        ]
+    },
     {path:'toDoList', component: ToDoList},    
     {path:'toDoDetail', component: ToDoDetail},    
     {path:'toDoCreateTask', component: ToDoCreateTask},

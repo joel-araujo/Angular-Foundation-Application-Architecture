@@ -8,4 +8,7 @@ import { RouterLinkWithHref, RouterOutlet } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './app.css',
 })
-export class App {}
+
+export class App {
+  
+}

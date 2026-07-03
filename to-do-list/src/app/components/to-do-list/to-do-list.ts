@@ -7,4 +7,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './to-do-list.css',
 })
-export class ToDoList {}
+
+export class ToDoList {
+  
+}

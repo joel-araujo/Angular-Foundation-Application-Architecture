@@ -1,10 +1,11 @@
 <h2 class="container">Track your tasks</h2>
+
 <nav class="container header">
-    <a routerLink="home">Home</a> | 
-    <a routerLink="toDoList">Today</a> | 
-    <a routerLink="toDoList">Upcoming</a> | 
-    <a routerLink="toDoDetail">Search</a> | 
-    <a routerLink="toDoCreateTask">Create Task</a>
+  <a routerLink="/home">Home</a> | 
+  <a routerLink="/toDoList" [queryParams]="{ filter: 'today' }">Today</a> | 
+  <a routerLink="/toDoList" [queryParams]="{ filter: 'upcoming' }">Upcoming</a> | 
+  <a routerLink="/toDoDetail">Search</a> | 
+  <a routerLink="/toDoCreateTask">Create Task</a>
 </nav>
 
 <router-outlet></router-outlet>
