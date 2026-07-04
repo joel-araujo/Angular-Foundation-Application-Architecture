@@ -1,0 +1,8 @@
+<div class="task-card">
+    <h3>{{ task.id }}</h3>
+    <h3>{{ task.title }}</h3>
+    <p>{{ task.description }}</p>
+
+    <button (click)="toggle.emit(task.id)">{{ task.completed ? 'Undo' : 'Complete' }}</button>
+    <button (click)="delete.emit(task.id)">Delete</button>
+</div>

@@ -1,5 +1,4 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { Task, TaskInterface } from '../../services/task';
 
 @Component({
   selector: 'app-home',
@@ -11,11 +10,5 @@ import { Task, TaskInterface } from '../../services/task';
 
 
 export class Home {
-  constructor(private task: Task) {}
 
-  tasks: TaskInterface[] = [];
-
-  ngOnInit() {
-    this.tasks = this.task.getTasks();
-  }
 }
