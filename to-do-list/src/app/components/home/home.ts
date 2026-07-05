@@ -2,10 +2,11 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { TaskInterface, TaskService } from '../../services/task';
 import { CommonModule } from '@angular/common';
 import { TaskCard } from '../task-card/task-card';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, TaskCard],
+  imports: [CommonModule, TaskCard, RouterOutlet],
   templateUrl: './home.html',
   changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './home.css',

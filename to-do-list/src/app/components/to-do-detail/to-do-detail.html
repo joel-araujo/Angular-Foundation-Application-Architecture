@@ -1,1 +1,13 @@
-<p>to-do-detail works!</p>
+<div *ngIf="task as task" class="task-detail">
+  <h2>{{ task.title }}</h2>
+
+  <p>{{ task.description }}</p>
+
+  <p>
+    Status: {{ task.completed ? 'Completed' : 'Incomplete' }}
+  </p>
+</div>
+
+<div *ngIf="!task">
+  <p>Task not found</p>
+</div>
