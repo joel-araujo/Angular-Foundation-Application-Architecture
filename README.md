@@ -46,9 +46,7 @@ The main goals of these exercises are:
 
 ---
 
-# Topics Covered
-
-## Angular Project Structure
+# Angular Project Structure
 
 Understanding how Angular applications are organized.
 
@@ -146,19 +144,7 @@ Main concepts:
 Typical application flow:
 
 ```text
-User
-
- ?
-
-Component
-
- ?
-
-Service / Application Logic
-
- ?
-
-Updated Interface
+User -> Component -> Service / Application Logic -> Updated Interface
 ```
 
 ---
@@ -177,8 +163,3 @@ Through these exercises, I developed a better understanding of:
 - Routing systems
 - Form handling
 - Application organization
-
----
-
-
-# Learning and improving Angular development skills through continuous practice and hands-on implementation.
