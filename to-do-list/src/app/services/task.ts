@@ -11,9 +11,12 @@ export interface TaskInterface {
 
 export class TaskService {
   private tasksList: TaskInterface[] = [
-    { id: 1, title: 'Task 1', description: 'Description for Task 1', completed: false },
-    { id: 2, title: 'Task 2', description: 'Description for Task 2', completed: false },
-    { id: 3, title: 'Task 3', description: 'Description for Task 3', completed: false }
+    {id: 1,title: 'Finish Angular Task Tracker UI',description: 'Improve the application design using Bootstrap, create responsive task cards, and finalize the navigation layout.',completed: false},
+    {id: 2,title: 'Review project requirements',description: 'Go through the project documentation and make sure all requested features are implemented before submission.',completed: true},
+    {id: 3,title: 'Fix routing issues',description: 'Investigate the task detail page navigation and make sure users can move between pages correctly.',completed: false},
+    {id: 4,title: 'Create user registration form',description: 'Build a reactive Angular form with validation for creating new users.',completed: false},
+    {id: 5,title: 'Prepare weekly report',description: 'Summarize completed work, current progress, and upcoming tasks for the team meeting.',completed: true},
+    {id: 6,title: 'Update application dependencies',description: 'Check installed packages, update outdated dependencies, and verify that the application still builds correctly.',completed: false}
   ];
 
   getTasks(): TaskInterface[] {

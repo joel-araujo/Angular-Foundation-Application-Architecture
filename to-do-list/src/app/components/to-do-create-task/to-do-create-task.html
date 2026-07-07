@@ -1,14 +1,20 @@
-<form [formGroup]="createTaskForm" (ngSubmit)="onSubmit()">
+<div class="container mt-4">
+  <div class="card shadow-sm p-4">
+    <h2 class="mb-4">Create New Task</h2>
+    <form [formGroup]="createTaskForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label class="form-label">Title</label>
+        <input type="text" class="form-control" formControlName="title" placeholder="Enter task title" [class.is-invalid]="createTaskForm.get('title')?.invalid && createTaskForm.get('title')?.touched">
+        <div class="invalid-feedback" *ngIf="createTaskForm.get('title')?.invalid && createTaskForm.get('title')?.touched">Title is required.</div>
+      </div>
 
-  <input
-    type="text"
-    formControlName="title"
-    placeholder="Title">
+      <div class="mb-3">
+        <label class="form-label">Description</label>
+        <textarea class="form-control" rows="5" formControlName="description" placeholder="Enter task description" [class.is-invalid]="createTaskForm.get('description')?.invalid && createTaskForm.get('description')?.touched"></textarea>
+        <div class="invalid-feedback" *ngIf="createTaskForm.get('description')?.invalid && createTaskForm.get('description')?.touched">Description is required.</div>
+      </div>
 
-  <textarea
-    formControlName="description"
-    placeholder="Description">
-  </textarea>
-
-  <button type="submit">Submit</button>
-</form>
+      <button type="submit" class="btn btn-primary w-100" [disabled]="createTaskForm.invalid">Create Task</button>
+    </form>
+  </div>
+</div>

@@ -3,6 +3,12 @@ body {
     font-family: "Segoe UI", sans-serif;
 }
 
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
 .card {
     border: none;
     border-radius: 15px;
@@ -10,7 +16,6 @@ body {
 }
 
 .card:hover {
-    transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0,0,0,.15);
 }
 
@@ -28,4 +33,4 @@ body {
 
 .card-title {
     font-weight: 600;
-}/* You can add global styles to this file, and also import other style files */
+}

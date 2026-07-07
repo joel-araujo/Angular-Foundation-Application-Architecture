@@ -23,7 +23,7 @@ export class ToDoCreateTask {
   ngOnInit() {
     this.createTaskForm = this.fb.group({
       title: ['', Validators.required],
-      description: ['']
+      description: ['', Validators.required]
     });
   }
 

@@ -1,11 +1,11 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { TaskInterface, TaskService } from '../../services/task';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-to-do-detail',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './to-do-detail.html',
   styleUrl: './to-do-detail.css',
   changeDetection: ChangeDetectionStrategy.Eager,
