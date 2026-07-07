@@ -1,8 +1,15 @@
-<app-task-card
-  *ngFor="let task of tasks"
-  [task]="task"
-  (toggle)="toggleTask(task.id)"
-  (delete)="deleteTask(task.id)">
-</app-task-card>
+<div class="row g-4">
 
-<router-outlet></router-outlet>
+    <div
+        class="col-md-6 col-lg-4"
+        *ngFor="let task of tasks">
+
+        <app-task-card
+            [task]="task"
+            (toggle)="toggleTask(task.id)"
+            (delete)="deleteTask(task.id)">
+        </app-task-card>
+
+    </div>
+
+</div>

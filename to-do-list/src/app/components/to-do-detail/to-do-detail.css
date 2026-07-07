@@ -1,0 +1,19 @@
+.card {
+    border: none;
+    border-radius: 15px;
+}
+
+.card-header {
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+.card-footer {
+    background: white;
+    border-top: 1px solid #eee;
+}
+
+.card-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+}

@@ -1,8 +1,14 @@
-<h2 class="container">Track your tasks</h2>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+  <div class="container">
+    <a class="navbar-brand fw-bold" routerLink="/home">Task Tracker</a>
 
-<nav class="container header">
-  <a routerLink="/home">Home</a> | 
-  <a routerLink="/toDoCreateTask">Create Task</a>
+    <div class="navbar-nav ms-auto">
+      <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+      <a class="nav-link" routerLink="/toDoCreateTask" routerLinkActive="active">Create Task</a>
+    </div>
+  </div>
 </nav>
 
-<router-outlet></router-outlet>
+<div class="container mt-5">
+  <router-outlet></router-outlet>
+</div>

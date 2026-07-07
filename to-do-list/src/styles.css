@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #f5f7fa;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,.15);
+}
+
+.btn {
+    border-radius: 10px;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+}
+
+.badge {
+    font-size: .9rem;
+}
+
+.card-title {
+    font-weight: 600;
+}/* You can add global styles to this file, and also import other style files */
