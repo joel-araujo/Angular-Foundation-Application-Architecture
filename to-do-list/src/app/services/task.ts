@@ -33,4 +33,14 @@ export class TaskService {
   deleteTask(id: number): void {
     this.tasksList = this.tasksList.filter(task => task.id !== id);
   }
+
+  addTask(task: Omit<TaskInterface, 'id' | 'completed'>): void {
+    const newTask: TaskInterface = {
+      id: this.tasksList.length + 1,
+      title: task.title,
+      description: task.description,
+      completed: false
+    };
+    this.tasksList.push(newTask);
+  }
 }
